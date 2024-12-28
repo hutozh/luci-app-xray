@@ -2,7 +2,7 @@ name: Build and Release
 
 on:
   push:
-    tags:
+    tags:luci-app-xray
       - "*"
   workflow_dispatch:
 
@@ -18,9 +18,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - arch: x86_64
-            sdk_url_path: https://downloads.openwrt.org/releases/23.05.5/targets/x86/64
-            sdk_name: -sdk-23.05.5-x86-64_
+          - arch: mvebu
+            sdk_url_path: https://downloads.openwrt.org/releases/23.05.5/targets/mvebu/cortexa9/
+            sdk_name: -sdk-23.05.5-mvebu-cortexa9_
 
     env:
       SDK_URL_PATH: ${{ matrix.sdk_url_path }}
