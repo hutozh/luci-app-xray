@@ -20,7 +20,7 @@ jobs:
         include:
           - arch: mvebu
             sdk_url_path: https://downloads.openwrt.org/releases/24.10.0/targets/mvebu/cortexa9
-            sdk_name: -sdk-24.10.0-mvebu-cortexa9_
+            sdk_name: -sdk-24.10.2-mvebu-cortexa9_
 
     env:
       SDK_URL_PATH: ${{ matrix.sdk_url_path }}
